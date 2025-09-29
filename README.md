@@ -37,7 +37,7 @@
 </div>
 
 2. Confluent Cloud cluster with Advanced Stream Governance package
-3. For clients, Confluent Platform 7.4.5, 7.5.4, 7.6.1 or higher are required.
+3. For clients, it recommended to use latest version as Confluent Cloud always maintained the latest patch of Kafka version.
 
 ***
 
@@ -45,7 +45,7 @@
 
 <br>
 
-In this workshop, you will have learned how to to use Spring-kafka in Spring framework to produce and consume the data on Confluent Cloud by using the Schema Registry to govern the data on streaming manner.
+In this workshop, you will have learned how to to use Kafka Client and Connectors to produce and consume the data on Confluent Cloud by using the Schema Registry to govern the data on streaming manner.
 ***
 
 
@@ -128,7 +128,8 @@ An environment contains clusters and its deployed components such as Apache Flin
 ***
 
 ## <a name="step-4"></a>Create Kafka Client to Produce and Consume using Schema Registry
-
+<Details>
+<summary>Spring Kafka</summary>
 1. Back to your directory and ensure you already clone the github, acess through terminal to edit your **application.properties** for each of your spring client for the endpoint and api key and api secret we have created.
 for example:
 ```bash
@@ -151,6 +152,34 @@ cd ../SpringAvroConsumer
 ./gradlew bootRun
 ```
 5. If the consumer running well, it will consume all of the message on the topic with exact schematize data.
+</Details>
+
+<Details>
+<summary>Python-WIP</summary>
+1. Back to your directory and ensure you already clone the github, acess through terminal to edit your **application.properties** for each of your spring client for the endpoint and api key and api secret we have created.
+for example:
+```bash
+cd spring-kafka-schemaregistry/SpringAvroProducer/main/resources/application.properties
+```
+
+2. Go to first directory **SpringAvroProducer** to run the kafka client.
+```bash
+./gradlew generateAvroJava
+./gradlew bootRun
+```
+
+3. Now check back to the Confluent Cloud Console on the **avro** topic.
+
+4. Stop the producer by using **ctrl+c** to continue with next step on Consumer side.
+
+```bash
+cd ../SpringAvroConsumer
+./gradlew generateAvroJava
+./gradlew bootRun
+```
+5. If the consumer running well, it will consume all of the message on the topic with exact schematize data.
+</Details>
+
 ***
 
 ## <a name="step-5"></a>How Schema Registry handle mismatch format data
