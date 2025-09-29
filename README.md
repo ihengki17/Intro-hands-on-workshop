@@ -196,7 +196,7 @@ cd ../SpringAvroConsumer
 **Notes**: if you have DBeaver or any universal database manager, you could access the DB to read the value.
 ***
 
-## <a name="step-6"></a>Sink Data without services
+## <a name="step-6"></a>Sink Data to Database without services (WIP)
 1. After capturing all the changes from our postgresql, let's try to offload the data into our MSSQL Server that will be used by another application to be consumed.
 
 2. Go back to the Cluster page Overview and click **Connectors** on the left tab
