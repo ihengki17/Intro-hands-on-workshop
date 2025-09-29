@@ -183,42 +183,29 @@ cd ../SpringAvroConsumer
 
 ## <a name="step-5"></a>Produce event with CDC (WIP)
 
-1. Back to your directory **spring-kafka-schemaregistry** and go to the **SpringAvroFakeProducer** and run the client.
-```bash
-cd ../SpringAvroFakeProducer
-./gradlew generateAvroJava
-./gradlew bootRun
-```
+1. Let's create CDC PostgreSQL Source Connector on Confluent Cloud, go back to the Cluster page Overview and click **Connectors** on the left tab
 
-2. What is the return after running the client?
+2. Search and Click **CDC PostgreSQL Source Conector**
 
-3. What makes the client return the error?
+3. Fill up the config by using the value on this table and click launch
+#table-WIP
+
+4. After launch the connector, you will see new topic created and you can see the transaction message that keep updating from the table
+**Notes**: if you have DBeaver or any universal database manager, you could access the DB to read the value.
 ***
 
 ## <a name="step-6"></a>Sink Data without services
-1. Back to your directory **spring-kafka-schemaregistry** and go to the **SpringAvroProducerv2** and run the client.
-```bash
-cd ../SpringAvroProducerv2
-./gradlew generateAvroJava
-./gradlew bootRun
-```
+1. After capturing all the changes from our postgresql, let's try to offload the data into our MSSQL Server that will be used by another application to be consumed.
 
-2. Back to your **Confluent Cloud Console** and click topic to check **avro** topic and check the data contract. 
+2. Go back to the Cluster page Overview and click **Connectors** on the left tab
 
-3. Do you see any difference between the previous producer and new producer?
-4. Now try with two different terminal console and go to the **spring-kafka-schemaregistry** directory to access the **SpringAvroConsumer** and **SpringAvroConsumerv2** directory
-```bash
-cd ../SpringAvroConsumer
-./gradlew bootRun
-```
+3. Click **+ Add Connectors** and search **SQL Server Sink Connector**
 
-```bash
-cd ../SpringAvroConsumerv2
-./gradlew generateAvroJava
-./gradlew bootRun
-```
+4. Fill up the config by using the value on this table and click launch
+#table-WIP
 
-5. Why both consume can still consume the data even though the producer already change the schema that being produce?
+5. Now you could access and see the new table on the MSSQL Server
+**Notes**: Access the MSSQL Server using SSMS or DBeaver or any universal database manager, you could access the DB to read the value.
 ***
 
 ## <a name="step-7"></a>Clean Up Resources
