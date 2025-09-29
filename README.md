@@ -43,7 +43,9 @@
 ## **Objective**
 
 <br>
-
+<div align="center" padding=25px>
+    <img src="images/arch.png" width=75% height=75%>
+</div>
 In this workshop, you will have learned how to to use Kafka Client and Connectors to produce and consume the data on Confluent Cloud by using the Schema Registry to govern the data on streaming manner.
 ***
 
