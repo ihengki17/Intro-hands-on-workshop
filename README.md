@@ -185,7 +185,7 @@ python3 ConsumerUser.py
 
 ***
 
-## <a name="step-5"></a>Produce event with CDC (WIP)
+## <a name="step-5"></a>Produce event with CDC
 
 1. Let's create CDC PostgreSQL Source Connector on Confluent Cloud, go back to the Cluster page Overview and click **Connectors** on the left tab
 
@@ -249,8 +249,10 @@ python3 ConsumerUser.py
 <div align="center" padding=25px>
     <img src="images/psql5.png" width=75% height=75%>
 </div>
+
 4. After launch the connector, you will see new topic created and you can see the transaction message that keep updating from the table
 **Notes**: if you have DBeaver or any universal database manager, you could access the DB to read the value.
+
 ***
 
 ## <a name="step-6"></a>Sink Data to Database without services (WIP)
