@@ -91,7 +91,7 @@ An environment contains clusters and its deployed components such as Apache Flin
 </div>
 
 4. Click **Begin Configuration**. 
-5. Choose **AWS** as your preferred Cloud Provide on **ap-southeast-1 (Singapore)** region, and **Single-AZ** availability zone. 
+5. Choose **AWS/GCP** as your preferred Cloud Provide on **asia-southeast2/ap-southeast-3 (Jakarta)** region, and **Single-AZ** availability zone. 
 6. Specify a **Cluster Name**. For the purpose of this lab, any name will work here. 
 
 <div align="center" padding=25px>
@@ -131,16 +131,16 @@ An environment contains clusters and its deployed components such as Apache Flin
 ## <a name="step-4"></a>Create Kafka Client to Produce and Consume using Schema Registry
 <Details>
 <summary>Spring Kafka</summary>
+
 1. Back to your directory and ensure you already clone the github, acess through terminal to edit your **application.properties** for each of your spring client for the endpoint and api key and api secret we have created.
 for example:
 ```bash
-cd spring-kafka-schemaregistry/SpringAvroProducer/main/resources/application.properties
+cd <path git clone>/Java/ProducerUser/main/resources/application.properties
 ```
 
-2. Go to first directory **SpringAvroProducer** to run the kafka client.
+2. Go to first directory **ProducerUser** to run the kafka client.
 ```bash
-./gradlew generateAvroJava
-./gradlew bootRun
+mvn clean install
 ```
 
 3. Now check back to the Confluent Cloud Console on the **avro** topic.
@@ -148,15 +148,17 @@ cd spring-kafka-schemaregistry/SpringAvroProducer/main/resources/application.pro
 4. Stop the producer by using **ctrl+c** to continue with next step on Consumer side.
 
 ```bash
-cd ../SpringAvroConsumer
-./gradlew generateAvroJava
-./gradlew bootRun
+add the credential
+cd <path git clone>/ConsumerUser/main/resources/application.properties
+
+mvn clean install
 ```
 5. If the consumer running well, it will consume all of the message on the topic with exact schematize data.
 </Details>
 
 <Details>
 <summary>Python-WIP</summary>
+
 1. Back to your directory and ensure you already clone the github, acess through terminal to edit your **application.properties** for each of your spring client for the endpoint and api key and api secret we have created.
 for example:
 ```bash
