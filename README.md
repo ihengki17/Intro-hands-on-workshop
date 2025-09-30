@@ -222,6 +222,33 @@ python3 ConsumerUser.py
 | (5) Review and Launch              | connector name                     | PostgreSQL_CDC_Source        |
 </div>
 
+<div align="center" padding=25px>
+    <img src="images/psql1.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/psql2.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/psql3.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/psql31.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/psql32.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/psql4.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/psql5.png" width=75% height=75%>
+</div>
 4. After launch the connector, you will see new topic created and you can see the transaction message that keep updating from the table
 **Notes**: if you have DBeaver or any universal database manager, you could access the DB to read the value.
 ***
