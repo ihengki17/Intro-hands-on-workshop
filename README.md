@@ -143,42 +143,42 @@ cd <path git clone>/Java/ProducerUser/main/resources/application.properties
 mvn clean install
 ```
 
-3. Now check back to the Confluent Cloud Console on the **avro** topic.
+3. Now check back to the Confluent Cloud Console on the **User** topic.
 
-4. Stop the producer by using **ctrl+c** to continue with next step on Consumer side.
+4. Stop the producer by using **ctrl+c** to continue with next step on Consumer side on **ConsumerUser** directory.
 
 ```bash
 add the credential
-cd <path git clone>/ConsumerUser/main/resources/application.properties
+cd <path git clone>/Java/ConsumerUser/main/resources/application.properties
 
 mvn clean install
 ```
+
 5. If the consumer running well, it will consume all of the message on the topic with exact schematize data.
 </Details>
 
 <Details>
-<summary>Python-WIP</summary>
+<summary>Python</summary>
 
-1. Back to your directory and ensure you already clone the github, acess through terminal to edit your **application.properties** for each of your spring client for the endpoint and api key and api secret we have created.
+1. Back to your directory and ensure you already clone the github, acess the **env.txt as .env** for each of your spring client for the endpoint and api key and api secret we have created.
 for example:
 ```bash
-cd spring-kafka-schemaregistry/SpringAvroProducer/main/resources/application.properties
+cp <path git clone>/Python/env.txt .env
 ```
 
-2. Go to first directory **SpringAvroProducer** to run the kafka client.
+2. Go to first directory **ProducerUser** on Python directory to run the kafka client.
 ```bash
-./gradlew generateAvroJava
-./gradlew bootRun
+cd <path git clone>/Python/ProducerUser
+python3 ProducerUser.py
 ```
 
-3. Now check back to the Confluent Cloud Console on the **avro** topic.
+3. Now check back to the Confluent Cloud Console on the **User** topic.
 
-4. Stop the producer by using **ctrl+c** to continue with next step on Consumer side.
+4. Stop the producer by using **ctrl+c** to continue with next step on Consumer side on **ConsumerUser** directory.
 
 ```bash
-cd ../SpringAvroConsumer
-./gradlew generateAvroJava
-./gradlew bootRun
+cd <path git clone>/Python/ConsumerUser
+python3 ConsumerUser.py
 ```
 5. If the consumer running well, it will consume all of the message on the topic with exact schematize data.
 </Details>
