@@ -189,10 +189,38 @@ python3 ConsumerUser.py
 
 1. Let's create CDC PostgreSQL Source Connector on Confluent Cloud, go back to the Cluster page Overview and click **Connectors** on the left tab
 
-2. Search and Click **CDC PostgreSQL Source Conector**
+2. Search and Click **Postgres CDC Source V2 (Debezium) connector**
 
 3. Fill up the config by using the value on this table and click launch
-#table-WIP
+<div align="center">
+
+| section                            |setting                             | value                        |
+|------------------------------------|------------------------------------|------------------------------|
+| (1) Kafka credentials              | api key                            | [*from step 5* ](#step-5)    |
+| (1) Kafka credentials              | api secret                         | [*from step 5* ](#step-5)    |
+| (2) Authentication                 | database hostname                  | 34.50.93.79                  |
+| (2) Authentication                 | database port                      | 5432                         |
+| (2) Authentication                 | database username                  | replica                      |
+| (2) Authentication                 | database password                  | [will be distributed]        |
+| (2) Authentication                 | database name                      | postgres                     |
+| (2) Authentication                 | ssl mode                           | prefer                       |
+| (3) Configuration                  | output record value                | AVRO                         |
+| (3) Configuration                  | output record key                  | AVRO                         |
+| (3) Configuration                  | topic prefix                       | CDC                          |
+| (3) Configuration                  | slot name                          | <yourname>_debezium          |
+| (3) Configuration                  | publication name                   | <yourname_dbz_publication    |
+| (3) Configuration                  | tables included                    | public.transactions          |
+| (3) Configuration                  | value converter decimal format     | NUMERIC                      |
+| (3) Configuration                  | after-state only                   | true                         |
+| (3) Configuration                  | decimal handling mode              | double                       |
+| (3) Configuration                  | time precision mode                | adaptive_time_microseconds   |
+| (3) Configuration                  | transform name                     | Topic_regexrouter            |
+| (3) Configuration                  | transform type                     | TopicRegexRouter             |
+| (3) Configuration                  | regex                              | ^[^.]+\.[^.]+\.(.*)$         |
+| (3) Configuration                  | replacement                        | $1                           |
+| (4) Sizing                         | tasks                              | 1                            |
+| (5) Review and Launch              | connector name                     | PostgreSQL_CDC_Source        |
+</div>
 
 4. After launch the connector, you will see new topic created and you can see the transaction message that keep updating from the table
 **Notes**: if you have DBeaver or any universal database manager, you could access the DB to read the value.
