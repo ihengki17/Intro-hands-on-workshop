@@ -296,7 +296,43 @@ python3 ConsumerUser.py
 | (5) Sizing                         | tasks                              | 1                                        |
 | (6) Review and Launch              | connector name                     | SQLServer_Sink                    |
 </div>
-    
+
+<div align="center" padding=25px>
+    <img src="images/sql1.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql2.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql3.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql41.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql42.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql43.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql44.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql45.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/sql46.png" width=75% height=75%>
+</div>
+
 5. Now you could access and see the new table on the MSSQL Server
 **Notes**: Access the MSSQL Server using SSMS or DBeaver or any universal database manager, you could access the DB to read the value.
 ***
