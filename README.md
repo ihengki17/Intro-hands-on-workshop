@@ -236,12 +236,12 @@ python3 ConsumerUser.py
 | (3) Configuration                  | output record key                  | AVRO                         |
 | (3) Configuration                  | topic prefix                       | CDC                          |
 | (3) Configuration                  | slot name                          | <yourname>_debezium          |
-| (3) Configuration                  | publication name                   | <yourname_dbz_publication    |
+| (3) Configuration                  | publication name                   | <yourname>_dbz_publication    |
 | (3) Configuration                  | tables included                    | public.transactions          |
 | (3) Configuration                  | value converter decimal format     | NUMERIC                      |
 | (3) Configuration                  | after-state only                   | true                         |
 | (3) Configuration                  | decimal handling mode              | double                       |
-| (3) Configuration                  | time precision mode                | adaptive_time_microseconds   |
+| (3) Configuration                  | time precision mode                | connect                      |
 | (3) Configuration                  | transform name                     | Topic_regexrouter            |
 | (3) Configuration                  | transform type                     | TopicRegexRouter             |
 | (3) Configuration                  | regex                              | ^[^.]+\.[^.]+\.(.*)$         |
@@ -302,27 +302,19 @@ python3 ConsumerUser.py
 | (3) Authentication                 | connection port                    | 1433                                     |
 | (3) Authentication                 | connection username                | sqlserver                                |
 | (3) Authentication                 | connection password                | [will be distributed]                    |
-| (3) Authentication                 | database name                      | postgres                                 |
+| (3) Authentication                 | database name                      | workshop                                 |
 | (3) Authentication                 | ssl mode                           | prefer                                   |
 | (4) Configuration                  | input record value                 | AVRO                                     |
 | (4) Configuration                  | input record key                   | AVRO                                     |
 | (4) Configuration                  | auto create table                  | true                                     |
 | (4) Configuration                  | auto add column                    | true                                     |
 | (4) Configuration                  | table name format                  | <yourname>_transactions                  |
-| (4) Configuration                  | table name format                  | public.transactions                      |
 | (4) Configuration                  | value converter decimal format     | NUMERIC                                  |
 | (4) Configuration                  | timestamp precision mode           | microsecond                              |
 | (4) Configuration                  | decimal handling mode              | double                                   |
-| (4) Configuration                  | time precision mode                | adaptive_time_microseconds               |
 | (4) Configuration                  | timestamp fields                   | transaction_date, created_at, updated_at |
-| (4) Configuration                  | transform name                     | timestamp1, timestamp2, timestamp3   ----> create 1 by 1 as the pictures shown     |
-| (4) Configuration                  | transform type                     | TimestampConverter$Value                 |
-| (4) Configuration                  | target type                        | Timestamp                                |
-| (4) Configuration                  | field                              | transaction_date, created_at, updated_at ----> create 1 by 1 as the pictures shown | 
-| (4) Configuration                  | format                             | yyyy-MM-dd'T'HH:mm:ss.SSS'Z'             |
-| (4) Configuration                  | unix.precision                     | microseconds                             |
 | (5) Sizing                         | tasks                              | 1                                        |
-| (6) Review and Launch              | connector name                     | SQLServer_Sink                    |
+| (6) Review and Launch              | connector name                     | SQLServer_Sink                           |
 </div>
 
 <div align="center" padding=25px>
