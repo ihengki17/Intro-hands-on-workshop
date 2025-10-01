@@ -318,14 +318,6 @@ python3 ConsumerUser.py
 </div>
 
 <div align="center" padding=25px>
-    <img src="images/sql43.png" width=75% height=75%>
-</div>
-
-<div align="center" padding=25px>
-    <img src="images/sql44.png" width=75% height=75%>
-</div>
-
-<div align="center" padding=25px>
     <img src="images/sql45.png" width=75% height=75%>
 </div>
 
