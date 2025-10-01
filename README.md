@@ -135,14 +135,6 @@ An environment contains clusters and its deployed components such as Apache Flin
 
 > **Note:** This section shows Cluster Metrics, such as Throughput and Storage. This page also shows the number of Topics, Partitions, Connectors, and ksqlDB Applications.  Below is an example of the metrics dashboard once you have data flowing through Confluent Cloud.
 
-<div align="center" padding=25px>
-    <img src="images/environment-overview.png" width=75% height=75%>
-</div>
-
-<div align="center" padding=25px>
-    <img src="images/cluster-metrics.png" width=75% height=75%>
-</div>
-
 2. Click on **Cluster Settings**. This is where you can find your *Cluster ID, Bootstrap Server, Cloud Details, Cluster Type,* and *Capacity Limits*.
 3. On the same navigation menu, select **Topics** and click **Create Topic**. 
 4. Enter **User** as the topic name, **3** as the number of partitions, and then click **Create with defaults**. Skip the data contracts as it will be created on the other step. 
