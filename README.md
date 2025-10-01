@@ -140,11 +140,11 @@ An environment contains clusters and its deployed components such as Apache Flin
 4. Enter **User** as the topic name, **3** as the number of partitions, and then click **Create with defaults**. Skip the data contracts as it will be created on the other step. 
 
 <div align="center" padding=25px>
-    <img src="images/create-topic1.png" width=50% height=50%>
+    <img src="images/create-topic-1.png" width=50% height=50%>
 </div>
 
 <div align="center" padding=25px>
-    <img src="images/create-topic2.png" width=50% height=50%>
+    <img src="images/create-topic-2.png" width=50% height=50%>
 </div>
 
 5. Repeat the previous step and create a second topic name **transactions** and **3** as the number of partitions.
