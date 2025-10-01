@@ -6,11 +6,12 @@
 1. [Log into Confluent Cloud](#step-1)
 2. [Create an Environment and Cluster](#step-2)
 3. [Create an API Key Pair](#step-3)
-4. [Create Kafka Client to Produce and Consume using Schema Registry](#step-4)
-5. [Produce event with CDC](#step-5)
-6. [Sink Data without services](#step-6)
-7. [Clean Up Resources](#step-7)
-8. [Confluent Resources and Further Testing](#step-8)
+4. [Create Topics and walk through Confluent Cloud Dashboard](#step-4)
+5. [Create Kafka Client to Produce and Consume using Schema Registry](#step-5)
+6. [Produce event with CDC](#step-6)
+7. [Sink Data without services](#step-7)
+8. [Clean Up Resources](#step-8)
+9. [Confluent Resources and Further Testing](#step-9)
 
 ***
 
@@ -128,7 +129,42 @@ An environment contains clusters and its deployed components such as Apache Flin
 
 ***
 
-## <a name="step-4"></a>Create Kafka Client to Produce and Consume using Schema Registry
+## <a name="step-4"></a>Creates Topic and Walk Through Cloud Dashboard
+
+1. On the navigation menu, you will see **Cluster Overview**. 
+
+> **Note:** This section shows Cluster Metrics, such as Throughput and Storage. This page also shows the number of Topics, Partitions, Connectors, and ksqlDB Applications.  Below is an example of the metrics dashboard once you have data flowing through Confluent Cloud.
+
+<div align="center" padding=25px>
+    <img src="images/environment-overview.png" width=75% height=75%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/cluster-metrics.png" width=75% height=75%>
+</div>
+
+2. Click on **Cluster Settings**. This is where you can find your *Cluster ID, Bootstrap Server, Cloud Details, Cluster Type,* and *Capacity Limits*.
+3. On the same navigation menu, select **Topics** and click **Create Topic**. 
+4. Enter **User** as the topic name, **3** as the number of partitions, and then click **Create with defaults**. Skip the data contracts as it will be created on the other step. 
+
+<div align="center" padding=25px>
+    <img src="images/create-topic1.png" width=50% height=50%>
+</div>
+
+<div align="center" padding=25px>
+    <img src="images/create-topic2.png" width=50% height=50%>
+</div>
+
+5. Repeat the previous step and create a second topic name **transactions** and **3** as the number of partitions.
+   
+> _**Note:** Topics have many configurable parameters. A complete list of those configurations for Confluent Cloud can be found [here](https://docs.confluent.io/cloud/current/using/broker-config.html). If you are interested in viewing the default configurations, you can view them in the Topic Summary on the right side._ 
+
+6. After topic creation, the **Topics UI** allows you to monitor production and consumption throughput metrics and the configuration parameters for your topics. When you begin sending messages to Confluent Cloud, you will be able to view those messages and message schemas.
+   
+***
+
+
+## <a name="step-5"></a>Create Kafka Client to Produce and Consume using Schema Registry
 <Details>
 <summary>Spring Kafka</summary>
 
@@ -185,7 +221,7 @@ python3 ConsumerUser.py
 
 ***
 
-## <a name="step-5"></a>Produce event with CDC
+## <a name="step-6"></a>Produce event with CDC
 
 1. Let's create CDC PostgreSQL Source Connector on Confluent Cloud, go back to the Cluster page Overview and click **Connectors** on the left tab
 
@@ -255,7 +291,7 @@ python3 ConsumerUser.py
 
 ***
 
-## <a name="step-6"></a>Sink Data to Database without services (WIP)
+## <a name="step-7"></a>Sink Data to Database without services (WIP)
 1. After capturing all the changes from our postgresql, let's try to offload the data into our MSSQL Server that will be used by another application to be consumed.
 
 2. Go back to the Cluster page Overview and click **Connectors** on the left tab
@@ -329,7 +365,7 @@ python3 ConsumerUser.py
 **Notes**: Access the MSSQL Server using SSMS or DBeaver or any universal database manager, you could access the DB to read the value.
 ***
 
-## <a name="step-7"></a>Clean Up Resources
+## <a name="step-8"></a>Clean Up Resources
 
 Deleting the resources you created during this workshop will prevent you from incurring additional charges. 
 
@@ -353,7 +389,7 @@ Deleting the resources you created during this workshop will prevent you from in
 
 *** 
 
-## <a name="step-8"></a>Confluent Resources and Further Testing
+## <a name="step-9"></a>Confluent Resources and Further Testing
 
 Here are some links to check out if you are interested in further testing:
 - [Confluent Cloud Documentation](https://docs.confluent.io/cloud/current/overview.html)
