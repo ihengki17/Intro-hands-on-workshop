@@ -260,11 +260,43 @@ python3 ConsumerUser.py
 
 2. Go back to the Cluster page Overview and click **Connectors** on the left tab
 
-3. Click **+ Add Connectors** and search **SQL Server Sink Connector**
+3. Click **+ Add Connectors** and search **Microsoft SQL Server Sink**
 
 4. Fill up the config by using the value on this table and click launch
-#table-WIP
-
+<div align="center">
+    
+| section                            |setting                             | value                                    |   
+|------------------------------------|------------------------------------|------------------------------------------|
+| (1) Topic selection                | topics name                        | transactions                             |
+| (2) Kafka credentials              | api key                            | [*from step 5* ](#step-5)                |
+| (2) Kafka credentials              | api secret                         | [*from step 5* ](#step-5)                |
+| (3) Authentication                 | connection host                    | 34.50.111.164                            |
+| (3) Authentication                 | connection port                    | 1433                                     |
+| (3) Authentication                 | connection username                | sqlserver                                |
+| (3) Authentication                 | connection password                | [will be distributed]                    |
+| (3) Authentication                 | database name                      | postgres                                 |
+| (3) Authentication                 | ssl mode                           | prefer                                   |
+| (4) Configuration                  | input record value                 | AVRO                                     |
+| (4) Configuration                  | input record key                   | AVRO                                     |
+| (4) Configuration                  | auto create table                  | true                                     |
+| (4) Configuration                  | auto add column                    | true                                     |
+| (4) Configuration                  | table name format                  | <yourname>_transactions                  |
+| (4) Configuration                  | table name format                  | public.transactions                      |
+| (4) Configuration                  | value converter decimal format     | NUMERIC                                  |
+| (4) Configuration                  | timestamp precision mode           | microsecond                              |
+| (4) Configuration                  | decimal handling mode              | double                                   |
+| (4) Configuration                  | time precision mode                | adaptive_time_microseconds               |
+| (4) Configuration                  | timestamp fields                   | transaction_date, created_at, updated_at |
+| (4) Configuration                  | transform name                     | timestamp1, timestamp2, timestamp3       | ----> create 1 by 1 as the pictures shown
+| (4) Configuration                  | transform type                     | TimestampConverter$Value                 |
+| (4) Configuration                  | target type                        | Timestamp                                |
+| (4) Configuration                  | field                              | transaction_date, created_at, updated_at | ----> create 1 by 1 as the pictures shown
+| (4) Configuration                  | format                             | yyyy-MM-dd'T'HH:mm:ss.SSS'Z'             |
+| (4) Configuration                  | unix.precision                     | microseconds                             |
+| (5) Sizing                         | tasks                              | 1                                        |
+| (6) Review and Launch              | connector name                     | SQLServer_Sink                    |
+</div>
+    
 5. Now you could access and see the new table on the MSSQL Server
 **Notes**: Access the MSSQL Server using SSMS or DBeaver or any universal database manager, you could access the DB to read the value.
 ***
