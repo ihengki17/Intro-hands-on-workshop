@@ -287,10 +287,10 @@ python3 ConsumerUser.py
 | (4) Configuration                  | decimal handling mode              | double                                   |
 | (4) Configuration                  | time precision mode                | adaptive_time_microseconds               |
 | (4) Configuration                  | timestamp fields                   | transaction_date, created_at, updated_at |
-| (4) Configuration                  | transform name                     | timestamp1, timestamp2, timestamp3       | ----> create 1 by 1 as the pictures shown
+| (4) Configuration                  | transform name                     | timestamp1, timestamp2, timestamp3   ----> create 1 by 1 as the pictures shown     |
 | (4) Configuration                  | transform type                     | TimestampConverter$Value                 |
 | (4) Configuration                  | target type                        | Timestamp                                |
-| (4) Configuration                  | field                              | transaction_date, created_at, updated_at | ----> create 1 by 1 as the pictures shown
+| (4) Configuration                  | field                              | transaction_date, created_at, updated_at ----> create 1 by 1 as the pictures shown | 
 | (4) Configuration                  | format                             | yyyy-MM-dd'T'HH:mm:ss.SSS'Z'             |
 | (4) Configuration                  | unix.precision                     | microseconds                             |
 | (5) Sizing                         | tasks                              | 1                                        |
