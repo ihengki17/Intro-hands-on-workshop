@@ -235,8 +235,8 @@ python3 ConsumerUser.py
 | (3) Configuration                  | output record value                | AVRO                         |
 | (3) Configuration                  | output record key                  | AVRO                         |
 | (3) Configuration                  | topic prefix                       | CDC                          |
-| (3) Configuration                  | slot name                          | <yourname>_debezium          |
-| (3) Configuration                  | publication name                   | <yourname>_dbz_publication    |
+| (3) Configuration                  | slot name                          | [yourname]_debezium          |
+| (3) Configuration                  | publication name                   | [yourname]_dbz_publication   |
 | (3) Configuration                  | tables included                    | public.transactions          |
 | (3) Configuration                  | value converter decimal format     | NUMERIC                      |
 | (3) Configuration                  | after-state only                   | true                         |
@@ -308,7 +308,7 @@ python3 ConsumerUser.py
 | (4) Configuration                  | input record key                   | AVRO                                     |
 | (4) Configuration                  | auto create table                  | true                                     |
 | (4) Configuration                  | auto add column                    | true                                     |
-| (4) Configuration                  | table name format                  | <yourname>_transactions                  |
+| (4) Configuration                  | table name format                  | [yourname]_transactions                  |
 | (4) Configuration                  | value converter decimal format     | NUMERIC                                  |
 | (4) Configuration                  | timestamp precision mode           | microsecond                              |
 | (4) Configuration                  | decimal handling mode              | double                                   |
