@@ -283,7 +283,7 @@ python3 ConsumerUser.py
 
 ***
 
-## <a name="step-7"></a>Sink Data to Database without services (WIP)
+## <a name="step-7"></a>Sink Data to Database without services
 1. After capturing all the changes from our postgresql, let's try to offload the data into our MSSQL Server that will be used by another application to be consumed.
 
 2. Go back to the Cluster page Overview and click **Connectors** on the left tab
