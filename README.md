@@ -48,12 +48,13 @@
     <img src="images/arch.png" width=75% height=75%>
 </div>
 In this workshop, you will have learned how to to use Kafka Client and Connectors to produce and consume the data on Confluent Cloud by using the Schema Registry to govern the data on streaming manner.
+
 ***
 
 
 ## <a name="step-1"></a>Log into Confluent Cloud
 
-1. Log into [Confluent Cloud](https://confluent.cloud) and enter your email and password.
+1. Log into [Confluent Cloud](https://confluent.cloud) and enter your email and password, If you don't have account you could sign up and use this promo code to access Confluent Cloud **POPTOUT0003YWTW**.
 
 <div align="center" padding=25px>
     <img src="images/login.png" width=50% height=50%>
