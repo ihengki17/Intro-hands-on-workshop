@@ -227,7 +227,7 @@ python3 ConsumerUser.py
 |------------------------------------|------------------------------------|------------------------------|
 | (1) Kafka credentials              | api key                            | [*from step 5* ](#step-5)    |
 | (1) Kafka credentials              | api secret                         | [*from step 5* ](#step-5)    |
-| (2) Authentication                 | database hostname                  | 34.50.93.79                  |
+| (2) Authentication                 | database hostname                  | 34.101.89.18                 |
 | (2) Authentication                 | database port                      | 5432                         |
 | (2) Authentication                 | database username                  | replica                      |
 | (2) Authentication                 | database password                  | [will be distributed]        |
@@ -299,7 +299,7 @@ python3 ConsumerUser.py
 | (1) Topic selection                | topics name                        | transactions                             |
 | (2) Kafka credentials              | api key                            | [*from step 5* ](#step-5)                |
 | (2) Kafka credentials              | api secret                         | [*from step 5* ](#step-5)                |
-| (3) Authentication                 | connection host                    | 34.50.111.164                            |
+| (3) Authentication                 | connection host                    | 34.50.109.152                            |
 | (3) Authentication                 | connection port                    | 1433                                     |
 | (3) Authentication                 | connection username                | sqlserver                                |
 | (3) Authentication                 | connection password                | [will be distributed]                    |
