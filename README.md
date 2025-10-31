@@ -36,6 +36,8 @@
     <img src="images/survey3.png" width=75% height=75%>
 </div>
 
+**PROMO CODE: POPTOUT0008UZQK**
+
 2. Confluent Cloud cluster with Advanced Stream Governance package
 3. For clients, it recommended to use latest version as Confluent Cloud always maintained the latest patch of Kafka version.
 
