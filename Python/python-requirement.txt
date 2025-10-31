@@ -1,0 +1,10 @@
+dotenv
+faker==37.11.0
+confluent_kafka==2.12.1
+attrs==25.4.0
+certifi==2025.10.5
+httpx
+cachetools==6.2.1
+authlib
+fastavro==1.12.1
+
