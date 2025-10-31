@@ -197,21 +197,26 @@ for example:
 cp <path git clone>/Python/env.txt .env
 ```
 
-2. Go to first directory **ProducerUser** on Python directory to run the kafka client.
+2. Install the requirement using pip or pip3:
+```bash
+pip3 install -r python-requirement.txt
+```
+
+3. Go to first directory **ProducerUser** on Python directory to run the kafka client.
 ```bash
 cd <path git clone>/Python/ProducerUser
 python3 ProducerUser.py
 ```
 
-3. Now check back to the Confluent Cloud Console on the **User** topic.
+4. Now check back to the Confluent Cloud Console on the **User** topic.
 
-4. Stop the producer by using **ctrl+c** to continue with next step on Consumer side on **ConsumerUser** directory.
+5. Stop the producer by using **ctrl+c** to continue with next step on Consumer side on **ConsumerUser** directory.
 
 ```bash
 cd <path git clone>/Python/ConsumerUser
 python3 ConsumerUser.py
 ```
-5. If the consumer running well, it will consume all of the message on the topic with exact schematize data.
+6. If the consumer running well, it will consume all of the message on the topic with exact schematize data.
 </Details>
 
 ***
