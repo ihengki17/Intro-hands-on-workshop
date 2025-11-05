@@ -56,7 +56,7 @@ In this workshop, you will have learned how to to use Kafka Client and Connector
 
 ## <a name="step-1"></a>Log into Confluent Cloud
 
-1. Log into [Confluent Cloud](https://confluent.cloud) and enter your email and password, If you don't have account you could sign up and use this promo code to access Confluent Cloud **POPTOUT0003YWTW**.
+1. Log into [Confluent Cloud](https://confluent.cloud) and enter your email and password, If you don't have account you could sign up and use this promo code to access Confluent Cloud **POPTOUT0008UZQK**.
 
 <div align="center" padding=25px>
     <img src="images/login.png" width=50% height=50%>
