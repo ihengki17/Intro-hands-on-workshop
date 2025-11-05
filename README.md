@@ -253,7 +253,7 @@ python3 ConsumerUser.py
 | (3) Configuration                  | transform name                     | Topic_regexrouter            |
 | (3) Configuration                  | transform type                     | TopicRegexRouter             |
 | (3) Configuration                  | regex                              | ^[^.]+\.[^.]+\.(.*)$         |
-| (3) Configuration                  | replacement                        | $1                           |
+| (3) Configuration                  | replacement                        | [yourname]_$1                |
 | (4) Sizing                         | tasks                              | 1                            |
 | (5) Review and Launch              | connector name                     | PostgreSQL_CDC_Source        |
 </div>
